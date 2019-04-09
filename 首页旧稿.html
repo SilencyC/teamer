@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<!--移动端必须要加的话-->
+	<meta name="viewport" width="device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+			/* header,nav,main,footer{
+				background-color: rgb(237, 241, 231);
+			} */
+	/* 头部 */
+		nav {
+			margin-bottom: 10px;
+		}
+		.input-group{
+			margin-top: 20px;
+		}
+		.nav>li>a{
+		
+		color:white;
+    }
+    .navbar-collapse {
+	  background-color: lightskyblue;
+		}
+     /* 导航栏去padding */
+		.container-fluid {
+			padding-right: 0px;
+			padding-left: 0px;
+		}
+		/* 轮播图大小 */
+		.carousel-inner>.item>img{
+			height: 300px;
+		}
+		.MEC-shouye-logo-syh{
+			padding-top: 20px;
+		}
+		.navbar-nav>li>.dropdown-menu{
+	  background-color: lightskyblue;
+		}
+		/* 尾部 */
+		.MEC-weibu{
+			background: #555;
+			color: #FFFFFF;
+			font-size: 12px;
+			padding: 25px;
+			width: 100%;
+			height: 220px;
+		}
+		.MEC-weibu-buju-left{
+			float: left;
+			margin-left:40px ;
+		}
+		.MEC-weibu-buju-top{
+			margin-top: 20px;
+			margin-bottom:20px;
+		}
+		/* 中部内容 具体大小可根据页面要求更改*/
+		.MEC-content-syh{
+			width: 300px;
+			height: 300px;
+		}
+		/* 何思思top */
+		.navbar-default {
+			height: 10px;
+		font-size: 12px;
+   }
+	 /* 手风琴样式 */
+	      .MEC-content-syh ul{
+						list-style: none;
+        }
+
+        .MEC-content-syh {
+            width: 100%;
+            margin: 10px auto 0;
+        }
+        .MEC-content-syh li {
+            width: 200px;
+            height: 250px;
+						float: left;
+						color:rgb(89, 91, 92);
+					    
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+				}
+				.MEC-content-syh li h3{
+					margin: 100px 85px;
+				}
+        .MEC-content-syh li:nth-of-type(1){
+          background-image: url("img/shoufengqin.1.jpg");
+        }
+        .MEC-content-syh li:nth-of-type(2) {
+            background-image: url("img/shoufengqin.2.jpg");
+        }
+        .MEC-content-syh li:nth-of-type(3) {
+            
+            background-image: url("img/shoufengqin.3.jpg");
+        }
+        .MEC-content-syh li:nth-of-type(4) {
+            background-image: url("img/shoufengqin.4.jpg");
+        }
+        .MEC-content-syh li:nth-of-type(5) {
+            background-image: url("img/shoufengqin.5.jpg");
+				}
+				/* 热门体检导航栏nav */
+				.MEC-content-nav1-syh ul a {
+				color:black;
+				background-color:rgb(231, 226, 226);
+				}
+				.MEC-content-nav1-syh ul a:hover{
+						background-color: lightskyblue;
+						color:white;
+				}
+				/* 缩略图 */
+				.caption h4{
+					text-align: center;
+				}
+				/* 首页背景变蓝 */
+				#MEC-navbar-syh li a:hover{
+					background-color: lightskyblue;
+				}
+				#MEC-navbar-syh li a:visited{
+					background-color: lightskyblue;
+				}
+    </style>
+</head>
+
+<body>
+	<header class="container">
+		<!-- top登录 注册 -->
+				<nav class="navbar navbar-default navbar-static-top">
+					 
+					<div class="container hidden-xs hidden-sm" >
+						<div class="col-xs-12  col-sm-2  pull-left " style="margin-top:14px;"> <span>中康医院-体检预约平台</span> </div>
+						<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 col-xs-offset-4">
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>请登录</a></li>
+								<li><a href="#">【免费注册】</a></li>
+								<li><a href="#">客服服务</a></li>
+								<li><a href="#"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>网站导航</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+		<!-- 体检logo图片 -->
+		<div class=" col-md-12 col-lg-12">
+			<div class=" col-sm-4 col-md-4" >
+					<h1 class="MEC-shouye-left-logo-syh" >
+						<img src="img/logo_left.gif" alt="logo" />
+						<img src="img/logo_right.gif" alt="logo" />
+					</h1>
+			</div>
+				<!-- 搜索组件 -->
+		    <div class=" col-md-4  col-lg-4">
+						<div >
+								
+								<div class="input-group MEC-shouye-logo-syh">
+									<input type="text" class="form-control" placeholder="套餐类别/套餐名/疾病名">
+									<span class="input-group-btn">
+										<button class="btn btn-info" type="button" >搜索</button>
+									</span>
+								</div>
+							</div>
+			</div>
+			<div class=" col-md-3 col-lg-3">
+			<img src="img/new_kf.gif" alt="logo" />
+		 </div> 
+		</div>
+	
+	</header>
+	<nav class="container">
+			<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"></a>
+			</div>
+		<div class=" col-md-12 col-lg-12 " style="padding:0">
+			<nav class="navbar navbar-info">
+				<div class="container-fluid">
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav" id='MEC-navbar-syh'>
+							<li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+							<li class="active"><a href="#">体检套餐</a></li>
+							<li class="active"><a href="#">CT检查</a></li>
+							<li class="active"><a href="#">企业团检</a></li>
+							<li class="active"><a href="#">报告读取</a></li>
+							
+							<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+										aria-expanded="false">体检百科<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="#">体检指南</a></li>
+										<li><a href="#">体检问答</a></li>
+										<li><a href="#">体检项目</a></li>
+										<li><a href="#">体检咨询</a></li>
+									</ul>
+							</li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+								<li class="active">
+								 <a href="#">体检报告查询</a> 
+								</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+
+	</nav>
+	<main class="container">
+		<section class="col-xs-12 col-sm-12"  style="padding:0">
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+						  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						  <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						</ol>
+					  
+						<!-- 轮播图 -->
+						<div class="carousel-inner" role="listbox" >
+							<div class="item active"   >
+							<img src="./img/lunbo1.jpg" alt="...">
+						  </div>
+						  <div class="item">
+							<img src="./img/lunbo2.jpg" alt="...">
+						  </div>
+						  <div class="item">
+								<img src="./img/lunbo3.jpg" alt="...">
+						  </div>
+						</div>
+					  
+						<!-- Controls -->
+						<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+						  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						  <span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+						  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						  <span class="sr-only">Next</span>
+						</a>
+						</div>			
+		</section>
+	  <!-- 手风琴特效 -->
+		<div class="container" >
+				<div class="col-xs-12 col-sm-12 "  >
+						<div class="MEC-content-syh">
+								<!-- 内容在中间 -->
+								<ul class='MEC-content-ul-syh'>
+										<li> <h3>父</br>母</br>套</br>餐 </h3></li>
+										<li><h3>入</br>职</br>套</br>餐</h3></li>
+										<li><h3>妇</br>科</br>套</br>餐</h3></li>
+										<li><h3>家</br>庭</br>套</br>餐</h3></li>
+										<li><h3>CT</br>&</br>PET</h3></li>
+								</ul>
+						</div>
+				</div>
+			</div>
+		  <!-- 中间导航nav1 -->
+		<div class="MEC-content-nav1-syh" >
+				<ul class="nav nav-pills nav-justified">
+						<li ><h3>热门体检中心</h3></li>
+						<li role="presentation"><a href="#">公立医院</a></li>
+						<li role="presentation"><a href="#">公立三甲</a></li>
+						<li role="presentation"><a href="#">民营医院</a></li>
+						<li role="presentation"><a href="#">专业机构</a></li>
+					  <li role="presentation"><a href="#">更多</a></li>
+				</ul>
+		</div>
+		<!-- 缩略图 -->
+		<div class="row">
+				<div class="col-sm-4 col-md-4">
+					<div class="thumbnail">
+						<img src="img/缩略图1.jpg" alt="...">
+						<div class="caption">
+							<h4>西南体检中心</h4>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-4">
+						<div class="thumbnail">
+							<img src="img/缩略图2.jpg" alt="...">
+							<div class="caption">
+								<h4>中北体检中心</h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 col-md-4">
+							<div class="thumbnail">
+								<img src="img/缩略图3.jpg" alt="...">
+								<div class="caption">
+									<h4>东北体检中心</h4>
+								</div>
+							</div>
+						</div>
+		</div>
+		<!-- 中间导航nav2 -->
+		<div class="MEC-content-nav1-syh" >
+				<ul class="nav nav-pills nav-justified">
+						<li ><h4>体验套餐</h4></li>
+						<li role="presentation"><a href="#">婚前体检</a></li>
+						<li role="presentation"><a href="#">生活体检</a></li>
+						<li role="presentation"><a href="#">常规体检</a></li>
+						<li role="presentation"><a href="#">妇科体检</a></li>
+						<li role="presentation"><a href="#">入职体检</a></li>
+						<li role="presentation"><a href="#">中年体检</a></li>
+						<li role="presentation"><a href="#">老年体检</a></li>
+				</ul>
+		</div>
+			<!-- 缩略图 -->
+			<div class="row">
+					<div class="col-sm-4 col-md-4">
+						<div class="thumbnail">
+							<img src="img/缩略图11.jpg" alt="...">
+							<div class="caption">
+								<h4>重庆民众体检中心(园博园分院)婚前体检套餐（女）</h4>
+								<p>适宜人群：青年女性,中年女性所属医院：重庆民众体检中心(园博园分院)体检时间：每周二至周日7:50-10:30（抽血时间为10点半前</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 col-md-4">
+							<div class="thumbnail">
+								<img src="img/缩略图22.jpg" alt="...">
+								<div class="caption">
+									<h4>重庆民众体检中心(园博园分院)婚前体检套餐（男）</h4>
+									<p>适宜人群：青年男性,中年男性所属医院：重庆民众体检中心(园博园分院)体检时间：每周二至周日7:50-10:30（抽血时间为10点半前</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4 col-md-4">
+								<div class="thumbnail">
+									<img src="img/缩略图33.jpg" alt="...">
+									<div class="caption">
+										<h4>重庆学府医院体检中心婚前体检套餐（女）</h4>
+										<p>适宜人群：青年女性,中年女性所属医院：重庆学府医院体检中心体检时间：周一至周六8：00-17：00</p>
+									</div>
+								</div>
+							</div>
+			</div>
+	</main>
+	<footer class="container">
+			
+			<div class="MEC-weibu hidden-xs hidden-sm" >
+					<div class="MEC-weibu-buju-left">
+						<div class="MEC-weibu-buju-top">
+							<p>
+								Copyright 2012-2019 viptijian.com 版权所有：中康体检网(福州中康信息科技有限公司) ICP证：闽ICP备10017105号
+								
+								<br>
+								
+								声明:本站部分信息图片来源于互联网,如果侵犯了您的权益敬请告知.
+								
+								<a href="" style="color: grey;">sitemap</a>
+								
+								法律顾问：福建雅厚律师事务所
+								
+								<br>
+								
+								<a href="" style="color: #FFFFFF;">增值业务经营许可证：粤B2-15138</a>
+							</p>
+						</div>
+						<div class="MEC-weibu-buju-bot" >
+							<div class="logo-top">
+								<img src="img/logo-top-1.png" style="width: 80px;">	
+								<img src="img/logo-top-2.png" style="width: 80px;">	
+								<img src="img/logo-top-3.png" style="width: 80px;">	
+								<img src="img/logo-top-4.png" style="width: 80px;">	
+							</div>
+							<div class="logo-bot">
+								<img src="img/logo-bot-1.png" style="width: 80px;">
+								<img src="img/logo-bot-2.png" style="width: 80px;">
+								<img src="img/logo-bot-3.png" style="width: 80px;">
+								<img src="img/logo-bot-4.png" style="width: 80px;">
+								<img src="img/logo-bot-5.png" style="width: 80px;">
+							</div>
+						</div>
+					</div>
+					<div class="MEC-weibu-buju-left" >
+						<img src="img/ne_ewm.png">
+					</div>
+				</div>
+			
+	</footer>
+	
+</body>
+<script>
+	  // 手风琴特效
+	     $(document).ready(function () {
+				// $('li').fadeTo(0,0.5)
+         $('.MEC-content-syh li').mouseenter(function(){
+						 $(this).stop().animate({width:400},100).siblings('li').stop().animate({width:150},100)
+						 $(this).siblings('li').fadeTo(0,0.5)
+             $(this).fadeTo(0,1)
+         }).mouseleave(function(){
+						 $('.MEC-content-syh li').stop().animate({width:200},100);
+						//  $(this).children("li").fadeTo(0,0.5)
+						$('.MEC-content-ul-syh').children('li').fadeTo(0,0.5)
+         })
+        });
+</script>
+
+</html>
